@@ -4,7 +4,7 @@ function UserPost({ id, userId, title, body }) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between bg-white p-4 rounded-lg shadow-sm border border-transparent transition-all duration-300 hover:scale-105 hover:border-black hover:bg-special-light-red">
+    <div className="group flex flex-col justify-between bg-white p-4 rounded-lg shadow-sm border border-transparent transition-all duration-300 hover:scale-105 hover:border-defaultBlack hover:bg-pink-50">
       <div className="flex flex-col items-center mb-3">
         <h2 className="text-sm font-bold text-center text-gray-800 leading-tight mb-2 capitalize">
           {title}
@@ -19,14 +19,14 @@ function UserPost({ id, userId, title, body }) {
 
       <div className="mt-auto">
         <button
-          onClick={() => setIsClicked(true)}
-          className={`w-full py-1.5 px-3 rounded-md transition-all duration-300 font-medium text-[10px] text-white
-            ${isClicked 
-              ? 'bg-special-red2 hover:brightness-110' 
-              : 'bg-gray-500 hover:bg-gray-400'
-            }`}
-        >
-          {isClicked ? 'Tombol sudah diklik' : 'Silakan Klik'}
+            onClick={() => setIsClicked(true)}
+            className={`w-full py-1.5 px-3 rounded-md transition-all duration-300 font-medium text-[10px] text-white
+                ${isClicked 
+                ? 'bg-special-red2 group-hover:brightness-120' 
+                : 'bg-gray-500 group-hover:brightness-120'
+                }`}
+            >
+            {isClicked ? 'Tombol sudah diklik' : 'Silakan Klik'}
         </button>
       </div>
     </div>
