@@ -1,11 +1,10 @@
-﻿import React from "react";
-import PostCard from "../PostCard";
-import { postsData } from "../postsData";
+import PostCard from "./PostCard";
+import postsData from "../data/postsData";
 
 function Exercise() {
   return (
     <>
-      <div className="min-h-screen bg-gray-06 p-10">
+      <div className="min-h-screen bg-gray-06 p-10 pl-20 pr-20">
         <h1 className="text-3xl font-bold text-center mb-10 text-special-red2">
           Post Cards
         </h1>
