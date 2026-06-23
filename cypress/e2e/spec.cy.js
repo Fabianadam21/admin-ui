@@ -13,7 +13,7 @@ describe("User login", () => {
 
     cy.get("input#password")
       .should("be.visible")
-      .should("have.attr", "placeholder", "*************")
+      .should("have.attr", "placeholder", "●●●●●●●●●●●●●●")
       .type("123456")
       .should("have.value", "123456");
 
@@ -27,7 +27,7 @@ describe("User login", () => {
 
   it("should not allow user to log in with invalid credentials", () => {
     cy.viewport(550,750);
-    
+
     cy.visit("http://localhost:5173/");
     cy.url().should("include", "/login");
 
@@ -39,7 +39,7 @@ describe("User login", () => {
 
     cy.get("input#password")
       .should("be.visible")
-      .should("have.attr", "placeholder", "*************")
+      .should("have.attr", "placeholder", "●●●●●●●●●●●●●●")
       .type("123")
       .should("have.value", "123");
 
